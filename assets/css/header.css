@@ -1,0 +1,38 @@
+#layout-header nav {
+  width: 100%;
+  height: auto;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightcoral;
+  color: white;
+  box-shadow: 1px 5px 4px 5px lightcoral;
+}
+#layout-header nav .mini-logo p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+#layout-header nav .auth-links ul {
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  list-style: none;
+}
+#layout-header nav .auth-links ul li {
+  height: auto;
+  width: 80px;
+  border: 1px solid white;
+  box-shadow: 4px 4px white;
+  margin: 10px;
+}
+#layout-header nav .auth-links ul li:hover {
+  background-color: white;
+  font-size: large;
+}
+#layout-header nav a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=header.css.map */

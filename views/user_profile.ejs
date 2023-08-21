@@ -1,7 +1,31 @@
 <link rel="stylesheet" href="/css/user_profile.css">
        <h1>
-          Codeial/ User Profile
+          Codeial / User Profile
        </h1>
 
-       <p>Name: <%= user.name %></p>
-       <p>Email: <%= user.email %></p>
+       
+       <!-- <p>Name: <%= user.name %></p>
+       <p>Email: <%= user.email %></p>-->
+
+      <% if (profile_user && user.id == profile_user.id){ %>
+            <!-- if user matches then show the form -->
+            <form action="/user/update/<%= profile_user.id %>" method="post">
+            <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required>
+            <input type="email" name="email" placeholder="Your Email" value="<%= profile_user.email %>" required>
+            <input type="submit" value="Update">
+            </form>
+
+      <% }else if (profile_user){ %>
+            <!-- else show only the profile info -->
+            <p> Name : <%= profile_user.name %></p>
+            <p> Email : <%= profile_user.email %></p>
+
+      <% } %> 
+
+      <!-- <% if (profile_user) { %>
+            <p>Name: <%= profile_user.name %></p>
+            <p>Email: <%= profile_user.email %></p>
+        <% } else { %>
+            <p>Profile user data is not available.</p>
+        <% } %> -->
+        

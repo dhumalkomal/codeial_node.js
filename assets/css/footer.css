@@ -1,0 +1,21 @@
+#layout-footer {
+  background-color: grey;
+  padding: 5px 10px;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#layout-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  list-style: none;
+}
+
+/*# sourceMappingURL=footer.css.map */

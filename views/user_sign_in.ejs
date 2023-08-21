@@ -1,9 +1,27 @@
+<div id="signIn-page">
+    <div class="user-logo">
+        <p>
+            <i class="fa-solid fa-user"></i>
+        </p>
+    </div>
 
-    <h1>Sign In</h1>
+    <div class="signIn-form">
+        <h1>Sign In</h1>
+        <div class="signIn-form-detail">
+            <form action="/user/createSession" method="POST">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="password" name="password" placeholder="Your Password" required>
+        
+                <input type="submit" id="btn" value="Sign In">
+                <!-- <button type="submit">Sign In</button> -->
+            </form>
+        </div>
+    </div>
+</div>
 
-    <form action="/user/createSession" method="POST">
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required>
 
-        <input type="submit" value="Sign In">
-    </form>
+    
+    
+    
+
+    

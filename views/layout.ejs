@@ -3,24 +3,53 @@
         <title>
             <%= title%>
         </title>
+        <script src="https://kit.fontawesome.com/b42969be6e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
         <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/sign_up.css">
+        <link rel="stylesheet" href="/css/sign_in.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/user_profile.css">
         <%- style %>
     </head>
 
     <body>
-        <header>
-            <%- include('_header'); -%>
-        </header>
+          <%- include('_header'); -%>
+        
 
+          <main id="layout-main">
               <%- body %>
-  
-       <!-- <h1>Codeial/ User Profile</h1> -->
+          </main>
+       
+          <%- include('_footer'); -%>
+      
+          <%- script %>
 
-       <footer>
-        <%- include('_footer'); -%>
-      </footer>
 
-      <%- script %>
+          <script>
+                <% if ( flash.success && flash.success.length > 0 ) { %>
+                    new Noty({
+                        theme: 'relax',
+                        text: '<%= flash.success %>',
+                        type: 'warning',
+                        layout:'topRight',
+                        timeout:1500
+                        
+                    }).show();
+                <% } %>
+
+                <% if ( flash.error && flash.error.length > 0 ) { %>
+                    new Noty({
+                        theme: 'relax',
+                        text: '<%= flash.error %>',
+                        type:'error',
+                        layout:'topRight',
+                        timeout:1500
+                        
+                    }).show();
+                <% } %>
+          </script>
 
     </body>
 
